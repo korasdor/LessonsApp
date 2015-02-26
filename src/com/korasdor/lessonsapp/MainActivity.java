@@ -21,7 +21,7 @@ public class MainActivity extends Activity{
 		
 		listView = (ListView) findViewById(com.korasdor.lessonsapp.R.id.listView);
 		
-		String[] values = new String[]{"Lesson1","Lesson2","Lesson3","Lesson4"};
+		String[] values = new String[]{"BaseCameraActivity","CameraActivity","Lesson3","Lesson4"};
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, 
 				android.R.layout.simple_list_item_1, android.R.id.text1, values );
@@ -36,12 +36,12 @@ public class MainActivity extends Activity{
 				
 //				int itemPosition = position;
 //				
-				String itemValue = ((String) listView.getItemAtPosition(position)) + "Activity";
+				String className = ".lessons." + ((String) listView.getItemAtPosition(position));
 				
 				String pkg = "com.korasdor.lessonsapp";
 				
 				Intent intent=new Intent();
-				intent.setComponent(new ComponentName(pkg, pkg + ".lessons." + itemValue));
+				intent.setComponent(new ComponentName(pkg, pkg + className));
 				startActivity(intent);
 			}
 		});

@@ -12,7 +12,7 @@ import android.os.Bundle;
 import android.view.SurfaceView;
 import android.view.WindowManager;
 
-public class Lesson1Activity extends Activity implements CvCameraViewListener {
+public class BaseCameraActivity extends Activity implements CvCameraViewListener {
 	
 	private CameraBridgeViewBase mOpenCvCameraView;
 	
